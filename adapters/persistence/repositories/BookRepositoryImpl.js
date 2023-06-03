@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
+const BookPort = require('../../../application/ports/BookPort');
 const BookSchema = require('../../../domain/models/BookSchema');
 
 const BookModel = mongoose.model('Book', BookSchema);
 
-class BookRepositoryImpl {
+class BookRepositoryImpl extends BookPort {
   getAll() {
     return BookModel.find().exec();
   }

@@ -1,11 +1,9 @@
-// main.js
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const connectToDatabase = require('./infrastructure/database/mongoose');
 const BookService = require('./application/services/BookService');
 const BookRepository = require('./adapters/persistence/repositories/BookRepositoryImpl');
-const BookController = require('./adapters/api/controllers/BookController');
+const BookController = require('./application/controllers/BookController');
 
 // Połączenie z bazą danych
 connectToDatabase();
